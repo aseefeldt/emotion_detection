@@ -50,6 +50,7 @@ After some research, it was concluded that a resnet50 model may provide better r
 
 A Resnet50 model was fit using the full data preprocessing detailed above but did not use the neutral category. The training accuracy was 65% with a valuation score of 27% and a test score of 24%. which puts the model 10% higher than the baseline. However, this time the emotion was contempt.
 
+
 ![](graphs/resnet50n2.jpg)
 
 The next model was trained on 4 emotion image sets; anger, fear, sadness, and happiness. The number of augmentations was also reduced to just rotation. It appears that the model is struggling to tell very similar emotions apart, which is not surprising as humans struggle with that as well. This model scored at 23% just under the baseline of 25%.
