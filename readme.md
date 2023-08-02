@@ -38,24 +38,27 @@ You can see, in the table below, that neutral and happiness are the highest two 
 Due to the complex nature of image data, a CNN model was chosen for this project. At first a simple neural net of 3 layers with 8 nodes each was attempted. However, time and computer restraints led to the implementation of three transfer learning models.
 
 MobileNet V2 was used first to see what sort of accuracy could be achieved with a base model. The image augmentation was reduced to just rotation to save time in fitting the model. The first model included all image types. The highest valuation score was 17% compared to the baseline (8 categories) of 12.5% or an increase of 4.5%. The test accuracy was 24%. This model was used with some demo photos that consisted of random pictures from each emotion and a few celebrities with resting angry faces. Unfortunately, this model predicted that everyone was surprised or almost surprised. This model ranked surprised as each images first or second emotion.
-mobilenetv2.jpg
+
+![](graphs/mobilenetv2.jpg)
 
 Next a DenseNet model with all of the data augmentation was fit. This model did not include neutral images. The validation accuracy peaked at 73% with the best valuation accuracy was 33%. The test accuracy was 23%. As there were 7 categories the base was 14% so we had an increase of 9% from base to test. Unfortunately, this model predicted that everyone is angry… like really angry (80% or higher) for most images. Even a smiling Bill Ney scored 90% for anger.
-densenet2.jpg
+
+![](graphs/densenet2.jpg)
 
 After some research, it was concluded that a resnet50 model may provide better results while not using too many computing resources.
 
+
 A Resnet50 model was fit using the full data preprocessing detailed above but did not use the neutral category. The training accuracy was 65% with a valuation score of 27% and a test score of 24%. which puts the model 10% higher than the baseline. However, this time the emotion was contempt.
-resnet50n2.jpg
+![](graphs/resnet50n2.jpg)
 
 The next model was trained on 4 emotion image sets; anger, fear, sadness, and happiness. The number of augmentations was also reduced to just rotation. It appears that the model is struggling to tell very similar emotions apart, which is not surprising as humans struggle with that as well. This model scored at 23% just under the baseline of 25%.
-resnet50.3.jpg
+![](graphs/resnet50.3.jpg)
 
 As an experiment, the happiness folder was reduced to be around the same size as the other folders (around 3,000 images). This produced a model with 33% accuracy, however, it leaned towards fear when sent through the demo.
-resnet50.4.jpg
+![](graphs/resnet50.4.jpg)
 
 The final model was trained with all the augmentation listed above. That model scored a 22% on the test data. It was an angry little model.
-resnet50.5.jpg
+![](graphs/resnet50.5.jpg)
 
 The next step was to ensemble the last 3 models to see if they produced a better score. They produces a score slightly above the second model, but it rounded down to 33%.
 
@@ -66,9 +69,9 @@ The two highest performing models were the DenseNet and the MobileNet at 10% and
 The two below images were both scored as angry. However, in the first one you may consider her surprised instead, but the MobileNet model scored surprised as the second emotion.
 
 The second was also scored as angry with surprise as his second as well.
-surprise.jpg
+![](images/demo/surprise.jpg)
 
-raf3.jpg
+![](images/demo/raf3.jpg)
 
 The model is far from perfect, but it did score 9% above base. It may not be able to be a stand-alone tool to help identify your emotions, but it could be used with other resources to help understand what you are communicating with your facial expressions.
 
@@ -80,7 +83,8 @@ As the author was going through the images, he almost became ‘noise-blind’ t
 Additionally, the author found that surprise was easily confused with happiness or anger. Those images are as if someone has hit the pause button and we are waiting to see if the situation is one of joy, anger, or sadness.
 
 The below image of John Snow is in the category of sadness. That may be correct, but the image next to him is of fear. Now the difference is subtle at best. Could the average person tell the difference and correctly guess? Emotions are hard.
-unnamed (1).png unnamed.png
+![](images/demo/unnamed (1).png)
+![](images/demo/unnamed.png)
 
 The author is tempted to say ‘garbage in so garbage out’, but that would be unfair. It isn’t that the images are wrongly orginzed, it is that emotions are subjective, so therefore uncertain at best. For that exact reason, there is no substitute for communication when dealing with others especially when dealing with emotions (I am as disappointed as you are).
 
