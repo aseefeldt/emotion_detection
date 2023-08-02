@@ -77,7 +77,7 @@ The second was also scored as angry with surprise as his second as well.
 
 ![](images/demo/ffhq_195.png)
 
-![](images/demo/raf3.jpg)
+![](images/demo/fear.jpg)
 
 The model is far from perfect, but it did score 9% above base. It may not be able to be a stand-alone tool to help identify your emotions, but it could be used with other resources to help understand what you are communicating with your facial expressions.
 
