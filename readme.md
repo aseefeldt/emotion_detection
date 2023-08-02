@@ -6,7 +6,7 @@ Detecting emotions based solely on facial expressions is notoriously tricky for 
 
 The objective of this project is to use artificial intelligence to illuminate what your facial expression may be communicating. By using your webcam you will be able to see what your current expression is saying and adjust your facial expression as needed. This project will help those who are neurodivergent build the mussel memory needed to express their emotions as. It will also help professionals become aware of their facial expressions and if they are sending unintended messages.
 
-##Data-Dictionary
+## Data-Dictionary
 Data came from Kaggle and consisted of colored photos of people expressing anger (3,220 individual images), contempt (2,872), sadness (3,092), fear (3,177), disgust(2,478), happiness(5,045), surprise (4,041), and neutrality (5,128).
 
 ## Executive Summary
@@ -32,7 +32,7 @@ As the dataset was limited the following random data augmentation was done for e
 
 You can see, in the table below, that neutral and happiness are the highest two categories.
 
-emotion_images.png
+![emotion_class_graph](graphs/emotion_images.png)
 
 ### Modeling
 Due to the complex nature of image data, a CNN model was chosen for this project. At first a simple neural net of 3 layers with 8 nodes each was attempted. However, time and computer restraints led to the implementation of three transfer learning models.
