@@ -75,7 +75,7 @@ The two below images were both scored as angry. However, in the first image, you
 
 The second was also scored as angry with surprise as his second as well.
 
-![](images/demo/ffhq_195.jpg)
+![](images/demo/ffhq_195.png)
 
 ![](images/demo/raf3.jpg)
 
