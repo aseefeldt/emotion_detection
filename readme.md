@@ -49,15 +49,19 @@ After some research, it was concluded that a resnet50 model may provide better r
 
 
 A Resnet50 model was fit using the full data preprocessing detailed above but did not use the neutral category. The training accuracy was 65% with a valuation score of 27% and a test score of 24%. which puts the model 10% higher than the baseline. However, this time the emotion was contempt.
+
 ![](graphs/resnet50n2.jpg)
 
 The next model was trained on 4 emotion image sets; anger, fear, sadness, and happiness. The number of augmentations was also reduced to just rotation. It appears that the model is struggling to tell very similar emotions apart, which is not surprising as humans struggle with that as well. This model scored at 23% just under the baseline of 25%.
+
 ![](graphs/resnet50.3.jpg)
 
 As an experiment, the happiness folder was reduced to be around the same size as the other folders (around 3,000 images). This produced a model with 33% accuracy, however, it leaned towards fear when sent through the demo.
+
 ![](graphs/resnet50.4.jpg)
 
 The final model was trained with all the augmentation listed above. That model scored a 22% on the test data. It was an angry little model.
+
 ![](graphs/resnet50.5.jpg)
 
 The next step was to ensemble the last 3 models to see if they produced a better score. They produces a score slightly above the second model, but it rounded down to 33%.
@@ -69,6 +73,7 @@ The two highest performing models were the DenseNet and the MobileNet at 10% and
 The two below images were both scored as angry. However, in the first one you may consider her surprised instead, but the MobileNet model scored surprised as the second emotion.
 
 The second was also scored as angry with surprise as his second as well.
+
 ![](images/demo/surprise.jpg)
 
 ![](images/demo/raf3.jpg)
@@ -85,6 +90,7 @@ Additionally, the author found that surprise was easily confused with happiness 
 The below image of John Snow is in the category of sadness. That may be correct, but the image next to him is of fear. Now the difference is subtle at best. Could the average person tell the difference and correctly guess? Emotions are hard.
 
 ![](images/demo/unnamed1.png)
+
 ![](images/demo/unnamed.png)
 
 The author is tempted to say ‘garbage in so garbage out’, but that would be unfair. It isn’t that the images are wrongly orginzed, it is that emotions are subjective, so therefore uncertain at best. For that exact reason, there is no substitute for communication when dealing with others especially when dealing with emotions (I am as disappointed as you are).
