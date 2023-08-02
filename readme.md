@@ -83,6 +83,7 @@ As the author was going through the images, he almost became ‘noise-blind’ t
 Additionally, the author found that surprise was easily confused with happiness or anger. Those images are as if someone has hit the pause button and we are waiting to see if the situation is one of joy, anger, or sadness.
 
 The below image of John Snow is in the category of sadness. That may be correct, but the image next to him is of fear. Now the difference is subtle at best. Could the average person tell the difference and correctly guess? Emotions are hard.
+
 ![](images/demo/unnamed1.png)
 ![](images/demo/unnamed.png)
 
