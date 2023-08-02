@@ -71,11 +71,11 @@ Unfortunately with ensembling and boosting, the model performance was not signif
 
 The two highest performing models were the DenseNet and the MobileNet at 10% and 9% above base. They both leaned towards one emotion. However, the MobileNet did a better job predicting secondary classes, or the ones that it did not pick as the main class. This was obvious because the DenseNet just didn’t bother and gave all secondary classes the same average score while the MobileNet generally had the correct emotion as the number two if it got the image incorrect (only a subset of demo images were viewed).
 
-The two below images were both scored as angry. However, in the first one you may consider her surprised instead, but the MobileNet model scored surprised as the second emotion.
+The two below images were both scored as angry. However, in the first image, you may consider her happy instead, but the MobileNet model scored happy as the second emotion.
 
 The second was also scored as angry with surprise as his second as well.
 
-![](images/demo/surprise.jpg)
+![](images/demo/ffhq_195.jpg)
 
 ![](images/demo/raf3.jpg)
 
